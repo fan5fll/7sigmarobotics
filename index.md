@@ -7,3 +7,4 @@ layout: home
 <div class="logo-box"><h1>7 Sigma Robotics</h1></div>
 <div class="container-row"><div class="arrow-left">text</div><div class="text-right"><img class="arrow-image" src="images/robot.jpeg"></div></div>
 <div class="container-row"><div class="text-left">picture</div><div class="arrow-right">text</div></div>
+<script>
