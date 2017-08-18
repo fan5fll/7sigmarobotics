@@ -93,19 +93,18 @@ h1{
     //do not edit
 }
 .arrow-left {
-	float: left;
-	margin: 30px;
-	display: inline-block;
-	position: relative;
-	background-color: black;
-	max-width: 30%;
-	padding: 50px 20px;
-	border-color: white;
-	border-width: 2px;
-	border-style: solid;
-	color: white;
-	text-align: center;
-	height: 150px;
+    float: left;
+    margin: 30px;
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    padding: 50px 20px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    color: white;
+    text-align: center;
+    height: 150px;
 }
 
 .arrow-right {
@@ -114,7 +113,6 @@ h1{
 	display: inline-block;
 	position: relative;
 	background-color: black;
-	width: 30%;
 	padding: 50px 20px;
 	border-color: white;
 	border-width: 2px;
@@ -126,6 +124,7 @@ h1{
 
 .text-right{
 	color: white;
+	width: fit-content;
 	float: right;
 	margin: 30px;
 	display: inline-block;
@@ -140,6 +139,7 @@ h1{
 
 .text-left{
 	color: white;
+	width: fit-content;
 	float: left;
 	margin: 30px;
 	display: inline-block;
@@ -152,11 +152,45 @@ h1{
 	height: 250px;
 }
 .container-row{
-	width: 50%;
+	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
+	height: 100%;
 }
 .arrow-image{
 	height: 100%;
+}
+.container-row  {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 60rem) {
+	.container-row {
+		display: block;
+	}
+	.container-row > * {
+		float: none;
+		margin: auto;
+	}
+}
+.fade:hover {
+	animation-name: fadeout;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards; 
+}
 
+.fade {
+	animation-name: fadein;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards; 
+}
+
+@keyframes fadeout {
+	from {opacity:1;}
+	to{opacity:0;}
+}
+
+@keyframes fadein {
+	from {opacity:0;}
+	to{opacity:1;}
 }
