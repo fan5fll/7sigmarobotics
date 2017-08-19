@@ -7,7 +7,8 @@ layout: home
 <div class="container-row">
 	<div class="arrow-left">
 		<h2>WHO?</h2>
-		<p class="fade">We are FTC team 10030, 7 Sigma. We are a neighborhood team from Cincinnati, Ohio comprised of 8 members</p>
+		<p class="fade">We are FTC team 10030, 7 Sigma. We are a neighborhood team from Cincinnati, Ohio comprised of 8 members
+		<br> <br> please contact us at 7sigmarobotics@gmail.com</p>
 	</div>
 	<div class="text-right">
 		<img class="arrow-image" src="images/team_v2.jpg">
