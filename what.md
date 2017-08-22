@@ -1,3 +1,6 @@
+---
+layout: home
+---
 <div class="logo-box">
 	<h1>WHAT?</h1>
 </div>

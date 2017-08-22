@@ -1,3 +1,11 @@
+a:visited{
+	color: #035094;
+}
+
+a{
+	color: #3dcae8;
+}
+
 body {
 	margin: 0px;
 	background-color: black;
@@ -12,6 +20,8 @@ body {
 	background-image: url(7p-Logo.jpg);
 	background-repeat: no-repeat;
     background-size: contain;
+    padding: 20px;
+    cursor: pointer;
 }
 
 .logo-box img {
@@ -172,19 +182,21 @@ h1{
 		float: none;
 		margin: auto;
 	}
+		.text-left, .text-right {
+		display: none;
+	}
 }
-.fade:hover {
+div:hover > .fade {
 	animation-name: fadeout;
 	animation-duration: 0.5s;
-	animation-fill-mode: forwards; 
+	animation-fill-mode: forwards;
 }
 
 .fade {
 	animation-name: fadein;
 	animation-duration: 0.5s;
-	animation-fill-mode: forwards; 
+	animation-fill-mode: forwards;
 }
-
 @keyframes fadeout {
 	from {opacity:1;}
 	to{opacity:0;}
@@ -195,7 +207,36 @@ h1{
 	to{opacity:1;}
 }
 
-.inforamtion {
+.information {
 	color: white;
-	margin: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 75%;
+	margin-top: 50px;
+	border: 2px solid white;
+	padding: 20px;
+	margin-bottom: 100px;
+}
+
+.fade-in{
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	animation-name: fadeout;
+	animation-duration: 0.5s;
+	opacity: 0;
+}
+
+div:hover > .fade-in {
+	animation-name: fadein;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.fade-in a{
+	color: #3dcae8;
+	size: 2em;
 }
