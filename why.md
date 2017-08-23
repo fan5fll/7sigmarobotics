@@ -15,6 +15,6 @@ FIRST (For Inspiration and Recognition of Science and Technology) was founded in
 	<a href="https://www.firstinspires.org/" target="_blank">learn more about FIRST</a>
 	<br>
 	<br>
-	<A HREF="mailto:7sigmarobotics@gmail.com?&Subject=7%20sigma%20robotics%20Q%26A%20inquiry%20whyFirst">Contact Us!</A>
+	<A HREF="mailto:3jbc22@gmail.com?&Subject=7%20sigma%20robotics%20Q%26A%20inquiry%20whyFirst">Contact Us!</A>
 	</h3>
 </div>
