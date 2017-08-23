@@ -5,7 +5,7 @@ layout: home
 	<h1>WHY?</h1>
 </div>
 <div class="information">
-	<h2>
+	<h3>
 	We compete in a competitive robotics and STEM organization called FIRST. FIRST is designed to give kids who are in the middle/upper school range of ages an opportunity of learning about STEM.
 	<br>
 	<br>
@@ -16,5 +16,5 @@ FIRST (For Inspiration and Recognition of Science and Technology) was founded in
 	<br>
 	<br>
 	<A HREF="mailto:7sigmarobotics@gmail.com?&Subject=7%20sigma%20robotics%20Q%26A%20inquiry%20whyFirst">Contact Us!</A>
-	</h2>
+	</h3>
 </div>
