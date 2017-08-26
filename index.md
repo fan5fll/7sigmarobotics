@@ -45,3 +45,14 @@ layout: home
 		<p class="fade-in"><a href="/how">Learn More</a></p>
 	</div>
 </div>
+<div class="container-row">
+	<div class="arrow-left">
+		<h2>OUR ACCOMPLISHMENTS?</h2>
+		<p class="fade">Our team has won a number of different awards. hover to learn more<br>
+		</p>
+		<p class="fade-in"><a href="/acc">Learn More</a></p>
+	</div>
+	<div class="text-right">
+		<img class="arrow-image" src="images/pva2.png">
+	</div>
+</div>
