@@ -58,11 +58,11 @@ layout: home
 </div>
 <div class="container-row">
 	<div class="text-left">
-		<img class="arrow-image" src="images/robot.jpeg">
+		<img class="arrow-image" src="images/7p-logo-large.png">
 	</div>
 	<div class="arrow-right">
 		<h2>OUR HISTORY?</h2>
-		<p class="fade">Our team has been involved in 5 seasons, growing out of a </p>
-		<p class="fade-in"><a href="/how">Learn More</a></p>
+		<p class="fade">Our team has been involved in ftc for 5 seasons, growing out of a team called Infinite Resistance.</p>
+		<p class="fade-in"><a href="/history">Learn More</a></p>
 	</div>
 </div>
