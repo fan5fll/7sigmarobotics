@@ -56,3 +56,13 @@ layout: home
 		<img class="arrow-image" src="images/pva2.png">
 	</div>
 </div>
+<div class="container-row">
+	<div class="text-left">
+		<img class="arrow-image" src="images/robot.jpeg">
+	</div>
+	<div class="arrow-right">
+		<h2>OUR HISTORY?</h2>
+		<p class="fade">Our team has been involved in 5 seasons, growing out of a </p>
+		<p class="fade-in"><a href="/how">Learn More</a></p>
+	</div>
+</div>
