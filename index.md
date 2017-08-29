@@ -73,6 +73,6 @@ layout: home
 		<p class="fade-in"><a href="/why">Learn More</a></p>
 	</div>
 	<div class="text-right">
-		<img class="arrow-image" src="images/thx.jpg">
+		<img class="arrow-image" src="images/thx.PNG">
 	</div>
 </div>
