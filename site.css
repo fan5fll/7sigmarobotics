@@ -43,7 +43,8 @@ h1{
 	float: right;
 	width: 50%;
 }
-.arrow-left:after {
+@media (min-width: 60rem) {
+	.arrow-left:after {
     left: 100%;
     top: 50%;
     border: solid transparent;
@@ -102,6 +103,8 @@ h1{
     margin-top: -33px;
     //do not edit
 }
+}
+
 .arrow-left {
     float: left;
     margin: 30px;
@@ -175,12 +178,16 @@ h1{
 	grid-template-columns: 1fr 1fr;
 }
 @media (max-width: 60rem) {
+	.logo-box{
+		padding: 0px;
+	}
 	.container-row {
 		display: block;
+		width: 75%;
 	}
 	.container-row > * {
 		float: none;
-		margin: auto;
+		margin: 4em auto auto auto;
 	}
 		.text-left, .text-right {
 		display: none;
