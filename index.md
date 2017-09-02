@@ -61,12 +61,12 @@ layout: home
 		<img class="arrow-image" src="images/7p-logo-large.png">
 	</div>
 	<div class="arrow-right">
-		<h2>OUR HISTORY?</h2>
-		<p class="fade">Our team has been involved in ftc for 5 seasons, growing out of a team called Infinite Resistance.</p>
-		<p class="fade-in"><a href="/history">Learn More</a></p>
+		<h2>IN THE NEWS</h2>
+		<p class="fade">Our team has been involved in ftc for 5 seasons, and we have been in the news quite a few times	.</p>
+		<p class="fade-in"><a href="/InTheNews">Learn More</a></p>
 	</div>
 </div>
-<div class="container-row">
+<!-- <div class="container-row">
 	<div class="arrow-left">
 		<h2>SPONSORS</h2>
 		<p class="fade">We compete in a competitive robotics and STEM organization called FIRST. FIRST is designed to give kids who are in the middle/upper school range of ages an opportunity of learning about STEM.</p>
@@ -75,4 +75,4 @@ layout: home
 	<div class="text-right">
 		<img class="arrow-image" src="images/thx.PNG">
 	</div>
-</div>
+</div> -->

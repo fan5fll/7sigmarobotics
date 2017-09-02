@@ -2,7 +2,7 @@
 layout: home
 ---
 <div class="logo-box">
-	<h1>HOW?</h1>
+	<h1>In The News</h1>
 </div>
 <div class="information">
 	Throughout the years, our team has built up quite a name for itself. From having several sucessful seasons, as well as outreach, and so much service that we got the President's Service Award! Anyway, here are some things about us
