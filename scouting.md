@@ -12,7 +12,7 @@ layout: home
 <script>
 (function (){
 	const password = prompt("Password:")
-	if (password === "password"){
+	if (password.toLowerCase() === "password"){
 		document.querySelector(".information").classList.remove("hidden");
 	}
 })()
