@@ -4,7 +4,7 @@ layout: home
 <div class="logo-box">
 	<h1>7 Sigma Robotics</h1>
 </div>
-<div class="container-row">
+<div class="container-row text-first">
 	<div class="arrow-left">
 		<h2>WHO?</h2>
 		<p class="fade">We are FTC team 10030, 7 Sigma. We are a neighborhood team from Cincinnati, Ohio comprised of 8 members
@@ -15,7 +15,7 @@ layout: home
 		<img class="arrow-image" src="images/team_v2.jpg">
 	</div>
 </div>
-<div class="container-row">
+<div class="container-row image-first">
 	<div class="text-left">
 		<img class="arrow-image" src="images/7p-logo-large.png">
 	</div>
@@ -25,7 +25,7 @@ layout: home
 		<p class="fade-in"><a href="/what">Learn More</a></p>
 	</div>
 </div>
-<div class="container-row">
+<div class="container-row text-first">
 	<div class="arrow-left">
 		<h2>WHY?</h2>
 		<p class="fade">We compete in a competitive robotics and STEM organization called FIRST. FIRST is designed to give kids who are in the middle/upper school range of ages an opportunity of learning about STEM.</p>
@@ -35,7 +35,7 @@ layout: home
 		<img class="arrow-image" src="images/firstlogo.jpg">
 	</div>
 </div>
-<div class="container-row">
+<div class="container-row image-first">
 	<div class="text-left">
 		<img class="arrow-image" src="images/robot.jpeg">
 	</div>
@@ -45,7 +45,7 @@ layout: home
 		<p class="fade-in"><a href="/how">Learn More</a></p>
 	</div>
 </div>
-<div class="container-row">
+<div class="container-row text-first">
 	<div class="arrow-left">
 		<h2>OUR ACCOMPLISHMENTS?</h2>
 		<p class="fade">Our team has won a number of different awards. hover to learn more<br>
@@ -56,7 +56,7 @@ layout: home
 		<img class="arrow-image" src="images/pva2.png">
 	</div>
 </div>
-<div class="container-row">
+<div class="container-row image-first">
 	<div class="text-left">
 		<img class="arrow-image" src="images/7p-logo-large.png">
 	</div>
