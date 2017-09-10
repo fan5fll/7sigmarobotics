@@ -20,5 +20,5 @@ layout: home
 
 <br>
 	<br>
-	<A HREF="mailto:7sigmarobotics@gmail.com?&Subject=7%20sigma%20robotics%20Q%26A%20inquiry%20Recources">have you been involved in any other events that we have presented at and not see the recource that you want? is a link not working? anything else? contact us!</A>
+	<A HREF="mailto:7sigmarobotics@gmail.com?&Subject=7%20sigma%20robotics%20Q%26A%20inquiry%20Recources	">have you been involved in any other events that we have presented at and not see the recource that you want? is a link not working? anything else? contact us!</A>
 </div>
