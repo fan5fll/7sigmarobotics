@@ -12,7 +12,7 @@ layout: home
 		<p class="fade-in"><a href="/who">Learn More</a></p>
 	</div>
 	<div class="text-right">
-		<img class="arrow-image" src="images/team_v2.jpg">
+		<img class="arrow-image" src="images/team_v3.jpg">
 	</div>
 </div>
 <div class="container-row image-first">
