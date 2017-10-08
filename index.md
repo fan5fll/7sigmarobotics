@@ -68,10 +68,10 @@ layout: home
 </div>
 <div class="container-row text-first">
 	<div class="arrow-left">
-		<h2>7 SIGMA RECOURCES</h2>
+		<h2>7 SIGMA RESOURCES</h2>
 		<p class="fade">Our team has done a number of different presentations, and here are the presentations.<br>
 		</p>
-		<p class="fade-in"><a href="/Recources">Access Recources</a></p>
+		<p class="fade-in"><a href="/Resources">Access Resources</a></p>
 	</div>
 	<div class="text-right">
 		<img class="arrow-image" src="images/googleslideslogogood.png">
