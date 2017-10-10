@@ -1,11 +1,12 @@
 ---
 layout: home
 ---
+
 <div class="logo-box">
-	<h1>resources</h1>
+	<h1>Resources</h1>
 </div>
 <div class="information">
-	our presentations will most likley be posted to here.
+	our presentations will most likely be posted to here.
 
 	<br>
 
