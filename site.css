@@ -43,7 +43,7 @@ h1{
 	float: right;
 	width: 50%;
 }
-@media (min-width: 60rem) {
+@media (min-width: 667px) {
 	.arrow-left:after {
     left: 100%;
     top: 50%;
