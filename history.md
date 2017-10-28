@@ -6,7 +6,7 @@ layout: home
 </div>
 <div class="information">
 	<h3>
-	Our team has been involved in ftc for 5 seasons, growing out of a team called Infinite Resistance.
+	Our team has been involved in FTC for 5 seasons, growing out of a team called Infinite Resistance.
 	<br>
 	<br>
 Our most experienced member has been involved in the organization for a total of 5 seasons. Our most successful season was when we went to the World Festival.

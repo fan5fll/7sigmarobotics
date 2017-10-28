@@ -62,7 +62,7 @@ layout: home
 	</div>
 	<div class="arrow-right">
 		<h2>IN THE NEWS</h2>
-		<p class="fade">Our team has been involved in FTC for 5 seasons, and we have been in the news quite a few times	.</p>
+		<p class="fade">Our team has been involved in FTC for 5 seasons, and we have been in the news quite a few times. This page also includes a current news feed about our team.</p>
 		<p class="fade-in"><a href="/InTheNews">Learn More</a></p>
 	</div>
 </div>

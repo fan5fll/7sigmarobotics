@@ -5,7 +5,7 @@ layout: home
 	<h1>In The News</h1>
 </div>
 <div class="information">
-	Throughout the years, our team has built up quite a name for itself. From having several sucessful seasons, as well as outreach, and so much service that we got the President's Service Award! Anyway, here are some things about us
+	Throughout the years, our team has built up quite a name for itself. From having several successful seasons, as well as outreach, and so much service that we got the President's Service Award! Anyway, here are some things about us
 	<br>
 	<br>
 <div class="event"><h3>FIRST Robotics Team 10030 – 7 Sigma Robotics Wins Ohio State Championship and Advances to Iowa Super Regional Tournament </h3>
@@ -35,8 +35,14 @@ layout: home
 <br>
  
  <br>
+</div>
 
-<br>
-	<br>
+<div class = "information">
+	<h2>Our Team News Feed:	</h2>
+	<h3>7 Sigma</h3>
+
+</div>
+
+<div class = "information">
 	<A HREF="mailto:7sigmarobotics@gmail.com?&Subject=7%20sigma%20robotics%20Q%26A%20inquiry%20InTheNews">Do you have a news story that should be on this page? is a link not working? anything else? contact us!</A>
 </div>
