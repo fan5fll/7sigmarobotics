@@ -77,6 +77,7 @@ layout: home
 		<img class="arrow-image" src="images/googleslideslogogood.png">
 	</div>
 </div>
+<div class = "media"><h2>Please follow us on Twitter:</h2> <a href="https://twitter.com/7sigma10030?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @7sigma10030</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <!-- <div class="container-row">
 	<div class="arrow-left">
 		<h2>SPONSORS</h2>
