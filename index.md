@@ -77,17 +77,16 @@ layout: home
 		<img class="arrow-image" src="images/googleslideslogogood.png">
 	</div>
 </div>
-<div class = "media"> <a href="https://twitter.com/7sigma10030?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false"><img src="/images/twitterLogo"></a><script async src="/images/twitterLogo" charset="utf-8"></script></div>
 
-<div><img src="images/twitterLogo"></div>
 
-<div class="media">
-<a href="http://twitter.com/share?url=http://example.com;text=myText;size=l&amp;count=none" target="_blank">
-    <div>
-        <img src="/images/twitterLogo.jpg">
-        <span>Twitter</span>
-    </div>
-</a>
+<div><a href="https://twitter.com/7sigma10030?ref_src=twsrc%5Etfw" target="_blank">
+<div class = "media2">
+<div class="container-row">
+<div class="imgTweet"><img src="images/twitterLogo.PNG"></div>
+<div class="FollowOurTwitterText">
+<h3>Visit us on Twitter @7Sigma10030</h3>
+</div>
+</div>
 </div>
 
 <!--https://platform.twitter.com/widgets.js

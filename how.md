@@ -6,7 +6,7 @@ layout: home
 </div>
 <div class="information">
 	<h3>
-	Our robot (and no, it does not have a name) is designed to pick up and shoot wiffle balls into a hoop called the ‘vortex’ in the center. The robot also can lift a yoga ball on top of the vortex.
+	Our robot (no, it does not have a name) is designed to pick up and shoot wiffle balls into a hoop called the ‘vortex’ in the center. The robot also can lift a yoga ball on top of the vortex.
 	<br>
 	<br>
 Matches have two distinct periods of play: a 30-second Autonomous period followed by a two-minute Driver Controlled period, the last 30 seconds of the Driver Controlled period is called the End Game which adds new scoring opportunities for robots to achieve. During the Autonomous period, robots operate using only pre-programmed instructions. And during the driver portion, The robot gets remote commands.
