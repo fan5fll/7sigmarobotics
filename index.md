@@ -79,14 +79,13 @@ layout: home
 </div>
 
 
-<div><a href="https://twitter.com/7sigma10030?ref_src=twsrc%5Etfw" target="_blank">
-<div class = "media2">
-<div class="container-row">
-<div class="imgTweet"><img src="images/twitterLogo.PNG"></div>
-<div class="FollowOurTwitterText">
+<div>
+<a href="https://twitter.com/7sigma10030?ref_src=twsrc%5Etfw" target="_blank">
+<div class="media2">
+<img src="images/twitterLogo.PNG">
 <h3>Visit us on Twitter @7Sigma10030</h3>
 </div>
-</div>
+</a>
 </div>
 
 <!--https://platform.twitter.com/widgets.js
