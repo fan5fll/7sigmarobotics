@@ -1,0 +1,110 @@
+<canvas id="canvas" width="752" height="570">
+</canvas>
+
+<style>
+#canvas {
+	cursor: none;
+}
+</style>
+
+<script>
+const CONV_RATE = 224;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext('2d');
+const MONSX = 103
+const MONSY = 213
+
+const backgroundImage = new Image();
+backgroundImage.addEventListener('load', () => {
+  ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+}, false);
+backgroundImage.src = "/images/map.png";
+
+
+function drawHurricane(x, y){
+	ctx.beginPath();
+	const radius = milesToPixels(140);
+    ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+    ctx.fillStyle = '#000';
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#000';
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y, 2, 0, Math.PI * 2, false);
+    ctx.fill();
+}
+
+function coordinatesToPixesl(){
+
+}
+
+function milesToPixels(miles) {
+	const pixels = miles * (CONV_RATE/400);
+	return pixels;
+}
+
+function pixelsToMiles(pixels) {
+	const miles = pixels * (400/CONV_RATE);
+	return miles;
+}
+
+function drawHurricaneLine(x1, y1, x2, y2, drawHurricane = true, drawText = true) {
+	const distanceX = x2 - x1;
+	const distanceY = y2 - y1;
+	const distance = Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
+	const distanceBetween = Math.floor(pixelsToMiles(distance));
+	if (drawHurricane) {
+		ctx.beginPath();
+		ctx.strokeStyle = '#ff0000';
+		ctx.lineWidth = 1;
+		ctx.moveTo(x1, y1);
+		ctx.lineTo(x2, y2);		
+	}	
+	if (drawText) {
+		ctx.font = "30px Arial";
+		ctx.fillText(distanceBetween, (x1+x2)/2, (y1+y2)/2);
+	}
+	ctx.stroke();
+}
+
+objects = [];
+
+function drawObjects (){
+	let lastHurricaneX;
+	let lastHurricaneY;
+	const thingsToDraw = objects.slice(0).reverse();
+	let drewText = false;
+	thingsToDraw.forEach((object) => {
+		if (object.type === 'hurricane') {
+			drawHurricane(object.x, object.y);
+			if (lastHurricaneX && lastHurricaneY) {
+				drawHurricaneLine(object.x, object.y, lastHurricaneX, lastHurricaneY, true, !drewText);
+				drewText = true;
+
+			}
+			lastHurricaneX = object.x;
+			lastHurricaneY = object.y;
+		}
+	})
+	const hurricane = thingsToDraw.find((object) => object.type == 'hurricane');
+	if (hurricane) {
+		drawHurricaneLine(hurricane.x, hurricane.y, MONSX, MONSY, false);		
+	}
+} 
+
+
+let oldX = 0;
+let oldY = 0;
+
+canvas.addEventListener('mousemove', (e) => {
+	ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+	drawHurricane(e.x, e.y);
+	drawObjects();
+})
+
+canvas.addEventListener('click', (e) => {
+	objects.push({ x: e.x, y: e.y, type: 'hurricane'});
+	console.log(e.x, e.y)
+})
+
+</script>
