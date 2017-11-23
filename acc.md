@@ -2,7 +2,7 @@
 layout: home
 ---
 <div class="logo-box">
-	<h1>WHAT?</h1>
+	<h1>Team Accomplishments</h1>
 </div>
 <div class="information">
 	<h3>

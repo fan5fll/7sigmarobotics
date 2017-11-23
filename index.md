@@ -47,7 +47,7 @@ layout: home
 </div>
 <div class="container-row text-first">
 	<div class="arrow-left">
-		<h2>OUR ACCOMPLISHMENTS?</h2>
+		<h2>OUR ACCOMPLISHMENTS</h2>
 		<p class="fade">Our team has won a number of different awards. hover to learn more<br>
 		</p>
 		<p class="fade-in"><a href="/acc">Learn More</a></p>
