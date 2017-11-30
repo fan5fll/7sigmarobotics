@@ -34,14 +34,14 @@ layout: home
 <a href="http://themanufactory.us/young-adults-with-big-brains/" target="_blank">http://themanufactory.us/young-adults-with-big-brains/</a> </div>
 <br>
  
- <br>
+<br>
 </div>
 
-<div class = "information">
+<!-- <div class = "information">
 	<h2>Our Team News Feed:	</h2>
 	<h3>7 Sigma</h3>
 
-</div>
+</div> -->
 
 <div class = "information">
 	<A HREF="mailto:7sigmarobotics@gmail.com?&Subject=7%20sigma%20robotics%20Q%26A%20inquiry%20InTheNews">Do you have a news story that should be on this page? is a link not working? anything else? contact us!</A>

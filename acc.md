@@ -16,6 +16,7 @@ our team has won:
 	<li>The FIRST Winning Alliance Award</li>
 	<li>The FIRST Connect Award</li>
 	<li>The FIRST/Rockwell Collins Innovate Award</li>
+	<li>The FIRST Ambassadors Award</li>
 	<li>And Counting!</li>
 </ul>
 	<br>
