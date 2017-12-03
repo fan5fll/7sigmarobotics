@@ -11,13 +11,13 @@ layout: home
 		<br> <br> please contact us at 7sigmarobotics@gmail.com</p>
 		<p class="fade-in"><a href="/who">Learn More</a></p>
 	</div>
-	<div class="text-right">
-		<img class="arrow-image" src="images/team_v3.jpg">
-	</div>
+<div class="text-right">
+	<img class="arrow-image" src="images/team_v3.jpg">
+</div>
 </div>
 <div class="container-row image-first">
 	<div class="text-left">
-		<img class="arrow-image" src="images/7p-logo-large.png">
+		<img class="arrow-image" src="images/7p-logo-large.png">	
 	</div>
 	<div class="arrow-right">
 		<h2>WHAT?</h2>
@@ -27,7 +27,7 @@ layout: home
 </div>
 <div class="container-row text-first">
 	<div class="arrow-left">
-		<h2>WHY?</h2>
+		<h2>WHY?</h2>   
 		<p class="fade">We compete in a competitive robotics and STEM organization called FIRST. FIRST is designed to give kids who are in the middle/upper school range of ages an opportunity of learning about STEM.</p>
 		<p class="fade-in"><a href="/why">Learn More</a></p>
 	</div>
