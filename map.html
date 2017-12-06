@@ -1,9 +1,56 @@
-<canvas id="canvas" width="752" height="570">
-</canvas>
-
+<div class="map-container">
+	<canvas id="canvas" width="752" height="570">
+	</canvas>
+	<div class="inputs">
+		<input type="number" id="longitude"/>
+		<input type="number" id="latitude"/>
+		<button type="submit" id="input-button">Add Hurricane</button>
+	</div>
+</div>
+<table class="da-table">
+	<tr>
+		<th>ADV</th>
+		<th>Lat. N.</th>
+		<th>Lon. W.</th>
+		<th>Category</th>
+		<th>Distance Traveled</th>
+		<th>Speed</th>
+		<th>Direction</th>
+		<th>Distance to Island</th>
+		<th>ETA</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>22</td>
+		<td>50</td>
+		<td>5</td>
+		<td>200km</td>
+		<td>1km/h</td>
+		<td>North</td>
+		<td>200km</td>
+		<td>2 hours</td>
+	</tr>
+</table>
+</div>
+<div id=""
+<link rel="stylesheet" href="tables.css">
 <style>
 #canvas {
-	cursor: none;
+	/*cursor: none;*/
+}
+.map-container > * {
+	flex: 1;
+}
+.inputs {
+	margin: 1em;
+}
+.map-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.da-table {
+	margin: 2em;
 }
 </style>
 
@@ -14,13 +61,19 @@ const ctx = canvas.getContext('2d');
 const MONSX = 103
 const MONSY = 213
 
+const longInput = document.getElementById("longitude");
+const latInput = document.getElementById("latitude");
+const inputButton = document.getElementById("input-button")
+
 const backgroundImage = new Image();
 backgroundImage.addEventListener('load', () => {
   ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 }, false);
 backgroundImage.src = "/images/map.png";
 
+function addRow(adv, lat, long, cat, distance, speed, direction, distance, eta){
 
+}
 function drawHurricane(x, y){
 	ctx.beginPath();
 	const radius = milesToPixels(140);
@@ -34,8 +87,16 @@ function drawHurricane(x, y){
     ctx.fill();
 }
 
-function coordinatesToPixesl(){
+function coordinatesToPixels(lat, long){
+	const latPixels = (63 - lat) * (683/19) + 73;
+	const longPixels = (22 - long) * (500/14) + 28;
+	return {x: latPixels, y: longPixels};
+}
 
+function drawHurricaneForCoords(lat, long){
+	const xAndY = coordinatesToPixels(lat, long);
+	console.log(xAndY);
+	drawHurricane(xAndY.x, xAndY.y);
 }
 
 function milesToPixels(miles) {
@@ -92,22 +153,40 @@ function drawObjects (){
 	}
 } 
 
-
 let oldX = 0;
 let oldY = 0;
 
 canvas.addEventListener('mousemove', (e) => {
-	ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-	drawHurricane(e.x, e.y);
-	drawObjects();
+	// ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+	//drawHurricane(e.x, e.y);
+	// drawObjects();
 })
 
 canvas.addEventListener('click', (e) => {
-	objects.push({ x: e.x, y: e.y, type: 'hurricane'});
-	console.log(e.x, e.y)
+	//objects.push({ x: e.x, y: e.y, type: 'hurricane'});
+	//console.log(e.x, e.y)
 })
 
+inputButton.addEventListener("click", () => {
+	console.log('IVE BEEN CLICKED');
+	const long = parseFloat(latInput.value, 10);
+	const lat = parseFloat(longInput.value, 10);
+	if (long < 8 || long > 22) {
+		alert('invalid');
+		return;
+	} 
+	if (lat < 45 || lat > 64) {
+		alert('invalid');
+		return;
+	} 
+	latInput.value = null;
+	longInput.value = null;
+	
+	const { x, y } = coordinatesToPixels(lat, long);
+
+	objects.push({ x: x, y: y, type: 'hurricane'});
+	drawObjects();
+})
 </script>
 
 
-//DIFFERENCE
