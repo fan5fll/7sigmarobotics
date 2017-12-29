@@ -41,14 +41,14 @@ layout: home
 	</div>
 	<div class="arrow-right">
 		<h2>HOW?</h2>
-		<p class="fade">Our robot (and no, it does not have a name) is designed to pick up and shoot wiffle balls into a hoop called the 'vortex' in the center. The robot also can lift a yoga ball on top of the 'vortex'.</p>
+		<p class="fade">Our robot (and no, it does not have a name) is designed to pick up and shoot wiffle balls into a hoop called the 'vortex' in the center. The robot also can lift a yoga ball on top of the 'vortex'. (Last Year)</p>
 		<p class="fade-in"><a href="/how">Learn More</a></p>
 	</div>
 </div>
 <div class="container-row text-first">
 	<div class="arrow-left">
 		<h2>OUR ACCOMPLISHMENTS</h2>
-		<p class="fade">Our team has won a number of different awards. hover to learn more<br>
+		<p class="fade">Our team has won a number of different awards, both form FIRST, and from other organizations and companies. <br>
 		</p>
 		<p class="fade-in"><a href="/acc">Learn More</a></p>
 	</div>
@@ -69,7 +69,7 @@ layout: home
 <div class="container-row text-first">
 	<div class="arrow-left">
 		<h2>7 SIGMA RESOURCES</h2>
-		<p class="fade">Our team has done a number of different presentations, and here are the presentations.<br>
+		<p class="fade">Our team has done a number of different presentations at schools, companies, and for individuals, and here are the presentations.<br>
 		</p>
 		<p class="fade-in"><a href="/Resources">Access Resources</a></p>
 	</div>
