@@ -1,56 +1,90 @@
 <div class="map-container">
-	<canvas id="canvas" width="752" height="570">
-	</canvas>
-	<div class="inputs">
-		<input type="number" id="longitude"/>
-		<input type="number" id="latitude"/>
-		<button type="submit" id="input-button">Add Hurricane</button>
-	</div>
+  <canvas id="canvas" width="752" height="570">
+  </canvas>
+  <div class="inputs">
+    <input type="number" id="longitude" placeholder="Longitude" />
+    <input type="number" id="latitude" placeholder="Latitude" />
+    <button type="submit" id="input-button">Add Hurricane</button>
+  </div>
 </div>
-<table class="da-table">
-	<tr>
-		<th>ADV</th>
-		<th>Lat. N.</th>
-		<th>Lon. W.</th>
-		<th>Category</th>
-		<th>Distance Traveled</th>
-		<th>Speed</th>
-		<th>Direction</th>
-		<th>Distance to Island</th>
-		<th>ETA</th>
-	</tr>
-	<tr>
-		<td>1</td>
-		<td>22</td>
-		<td>50</td>
-		<td>5</td>
-		<td>200km</td>
-		<td>1km/h</td>
-		<td>North</td>
-		<td>200km</td>
-		<td>2 hours</td>
-	</tr>
+<table class="da-table minimalistBlack">
+  <thead>
+  <tr>
+    <th>ADV</th>
+    <th>Lat. N.</th>
+    <th>Lon. W.</th>
+    <th>Category</th>
+    <th>Distance Traveled</th>
+    <th>Speed</th>
+    <th>Direction</th>
+    <th>Distance to Island</th>
+    <th>ETA</th>
+  </tr>
+  </thead>
+  <tbody id="data">
+</tbody>
 </table>
 </div>
-<div id=""
-<link rel="stylesheet" href="tables.css">
 <style>
 #canvas {
-	/*cursor: none;*/
+  flex: 0;
+  /*cursor: none;*/
 }
 .map-container > * {
-	flex: 1;
+  flex: 1;
 }
 .inputs {
-	margin: 1em;
+  margin: 1em;
 }
 .map-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .da-table {
-	margin: 2em;
+  margin: 2em;
+}
+@media print {
+  #canvas {
+    display: none;
+  }
+  .inputs {
+    display: none;
+  }
+}
+table.minimalistBlack {
+  border: 3px solid #000000;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.minimalistBlack td, table.minimalistBlack th {
+  border: 1px solid #000000;
+  padding: 5px 4px;
+}
+table.minimalistBlack tbody td {
+  font-size: 13px;
+}
+table.minimalistBlack thead {
+  background: #CFCFCF;
+  background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  border-bottom: 3px solid #000000;
+}
+table.minimalistBlack thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  text-align: left;
+}
+table.minimalistBlack tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  border-top: 3px solid #000000;
+}
+table.minimalistBlack tfoot td {
+  font-size: 14px;
 }
 </style>
 
@@ -71,12 +105,30 @@ backgroundImage.addEventListener('load', () => {
 }, false);
 backgroundImage.src = "/images/map.png";
 
-function addRow(adv, lat, long, cat, distance, speed, direction, distance, eta){
+const table=document.getElementById("data")
+
+function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta){
+  const tr=document.createElement("tr");
+  tr.innerHTML = `
+  <tr>
+    <td>${adv}</td>
+    <td>${lat}</td>
+    <td>${long}</td>
+    <td>Insert Category</td>
+    <td>${distance}km</td>
+    <td>${speed}km/h</td>
+    <td>${direction}</td>
+    <td>${distance2}km</td>
+    <td>${eta}</td>
+  </tr>
+  `;
+  table.appendChild(tr)
 
 }
+window.addRow = addRow;
 function drawHurricane(x, y){
-	ctx.beginPath();
-	const radius = milesToPixels(140);
+  ctx.beginPath();
+  const radius = milesToPixels(140);
     ctx.arc(x, y, radius, 0, Math.PI * 2, false);
     ctx.fillStyle = '#000';
     ctx.lineWidth = 2;
@@ -88,105 +140,132 @@ function drawHurricane(x, y){
 }
 
 function coordinatesToPixels(lat, long){
-	const latPixels = (63 - lat) * (683/19) + 73;
-	const longPixels = (22 - long) * (500/14) + 28;
-	return {x: latPixels, y: longPixels};
+  const latPixels = (63 - lat) * (683/19) + 73;
+  const longPixels = (22 - long) * (500/14) + 28;
+  return {x: latPixels, y: longPixels};
 }
 
 function drawHurricaneForCoords(lat, long){
-	const xAndY = coordinatesToPixels(lat, long);
-	console.log(xAndY);
-	drawHurricane(xAndY.x, xAndY.y);
+  const xAndY = coordinatesToPixels(lat, long);
+  console.log(xAndY);
+  drawHurricane(xAndY.x, xAndY.y);
 }
 
 function milesToPixels(miles) {
-	const pixels = miles * (CONV_RATE/400);
-	return pixels;
+  const pixels = miles * (CONV_RATE/400);
+  return pixels;
 }
 
 function pixelsToMiles(pixels) {
-	const miles = pixels * (400/CONV_RATE);
-	return miles;
+  const miles = pixels * (400/CONV_RATE);
+  return miles;
 }
 
-function drawHurricaneLine(x1, y1, x2, y2, drawHurricane = true, drawText = true) {
-	const distanceX = x2 - x1;
-	const distanceY = y2 - y1;
-	const distance = Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
-	const distanceBetween = Math.floor(pixelsToMiles(distance));
-	if (drawHurricane) {
-		ctx.beginPath();
-		ctx.strokeStyle = '#ff0000';
-		ctx.lineWidth = 1;
-		ctx.moveTo(x1, y1);
-		ctx.lineTo(x2, y2);		
-	}	
-	if (drawText) {
-		ctx.font = "30px Arial";
-		ctx.fillText(distanceBetween, (x1+x2)/2, (y1+y2)/2);
-	}
-	ctx.stroke();
+function calcDistance(x1, y1, x2, y2) {
+  const distanceX = x2 - x1;
+  const distanceY = y2 - y1;
+  const distance = Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
+  return Math.floor(pixelsToMiles(distance));
+}
+
+function getDirection(x1, y1, x2, y2) {
+  const distanceX = x2 - x1;
+  const distanceY = y2 - y1;
+  const eOrW = distanceX > 0 ? 'West' : 'East';
+  const nOrS = distanceY > 0 ? 'North' : 'South'; 
+  return `${nOrS} ${eOrW}`
+}
+
+function drawHurricaneLine(x1, y1, x2, y2, drawHurricane = true, drawText = false) {
+  const distanceBetween = calcDistance(x1, y1, x2, y2);
+  if (drawHurricane) {
+    ctx.beginPath();
+    ctx.strokeStyle = '#ff0000';
+    ctx.lineWidth = 1;
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);   
+  } 
+  if (drawText) {
+    ctx.font = "30px Arial";
+    ctx.fillText(distanceBetween, (x1+x2)/2, (y1+y2)/2);
+  }
+  ctx.stroke();
 }
 
 objects = [];
 
 function drawObjects (){
-	let lastHurricaneX;
-	let lastHurricaneY;
-	const thingsToDraw = objects.slice(0).reverse();
-	let drewText = false;
-	thingsToDraw.forEach((object) => {
-		if (object.type === 'hurricane') {
-			drawHurricane(object.x, object.y);
-			if (lastHurricaneX && lastHurricaneY) {
-				drawHurricaneLine(object.x, object.y, lastHurricaneX, lastHurricaneY, true, !drewText);
-				drewText = true;
+  let lastHurricaneX;
+  let lastHurricaneY;
+  const thingsToDraw = objects.slice(0).reverse();
+  let drewText = false;
+  thingsToDraw.forEach((object) => {
+    if (object.type === 'hurricane') {
+      drawHurricane(object.x, object.y);
+      if (lastHurricaneX && lastHurricaneY) {
+        drawHurricaneLine(object.x, object.y, lastHurricaneX, lastHurricaneY, true, false);
+        drewText = true;
 
-			}
-			lastHurricaneX = object.x;
-			lastHurricaneY = object.y;
-		}
-	})
-	const hurricane = thingsToDraw.find((object) => object.type == 'hurricane');
-	if (hurricane) {
-		drawHurricaneLine(hurricane.x, hurricane.y, MONSX, MONSY, false);		
-	}
+      }
+      lastHurricaneX = object.x;
+      lastHurricaneY = object.y;
+    }
+  })
+  const hurricane = thingsToDraw.find((object) => object.type == 'hurricane');
+  if (hurricane) {
+    drawHurricaneLine(hurricane.x, hurricane.y, MONSX, MONSY, false);   
+  }
 } 
+
+function getLastHurricane(){
+  return objects.reverse().find((object) => object.type == 'hurricane')
+}
 
 let oldX = 0;
 let oldY = 0;
 
 canvas.addEventListener('mousemove', (e) => {
-	// ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-	//drawHurricane(e.x, e.y);
-	// drawObjects();
+  // ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+  //drawHurricane(e.x, e.y);
+  // drawObjects();
 })
 
 canvas.addEventListener('click', (e) => {
-	//objects.push({ x: e.x, y: e.y, type: 'hurricane'});
-	//console.log(e.x, e.y)
+  //objects.push({ x: e.x, y: e.y, type: 'hurricane'});
+  //console.log(e.x, e.y)
 })
-
+let advance = 0;
 inputButton.addEventListener("click", () => {
-	console.log('IVE BEEN CLICKED');
-	const long = parseFloat(latInput.value, 10);
-	const lat = parseFloat(longInput.value, 10);
-	if (long < 8 || long > 22) {
-		alert('invalid');
-		return;
-	} 
-	if (lat < 45 || lat > 64) {
-		alert('invalid');
-		return;
-	} 
-	latInput.value = null;
-	longInput.value = null;
-	
-	const { x, y } = coordinatesToPixels(lat, long);
-
-	objects.push({ x: x, y: y, type: 'hurricane'});
-	drawObjects();
+  console.log('IVE BEEN CLICKED');
+  const long = parseFloat(latInput.value, 10);
+  const lat = parseFloat(longInput.value, 10);
+  if (long < 8 || long > 22) {
+    alert('invalid');
+    return;
+  } 
+  if (lat < 45 || lat > 64) {
+    alert('invalid');
+    return;
+  } 
+  latInput.value = null;
+  longInput.value = null;
+  
+  const { x, y } = coordinatesToPixels(lat, long);
+  // function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta)
+  const distance2 = calcDistance(x, y, MONSX, MONSY);
+  const hurricane = getLastHurricane();
+  let distance = 0;
+  let direction = 'n/a';
+  let eta = 'n/a'
+  if (hurricane) {
+    direction = getDirection(x, y, hurricane.x, hurricane.y);
+    distance = calcDistance(x, y, hurricane.x, hurricane.y);
+    eta = Math.floor((distance2/distance) * 100)/100;
+    eta = eta + "hours";
+  }
+  addRow(advance, lat, long, 'doesn\'t matter', distance, distance, direction, distance2, eta);
+  advance += 1;
+  objects.push({ x: x, y: y, type: 'hurricane'});
+  drawObjects();
 })
 </script>
-
-

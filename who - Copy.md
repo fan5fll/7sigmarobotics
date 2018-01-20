@@ -6,7 +6,7 @@ layout: home
 </div>
 <div class="information">
 	<h3>
-	We are FTC team 10030, 7 Sigma. We are a neighborhood team from Cincinnati, Ohio comprised of 7 members
+	We are FTC team 10030, 7 Sigma. We are a neighborhood team from Cincinnati, Ohio comprised of 8 members
 	<br>
 	<br>
 7 Sigma is a community-based, world class robotics team composed of high school students from the Greater Cincinnati area. We design, build, program, and operate robots to compete in a head-to-head challenge in an alliance format in the FIRST Tech Challenge. 
