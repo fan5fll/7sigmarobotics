@@ -5,6 +5,11 @@
     <input type="number" id="longitude" placeholder="Longitude" />
     <input type="number" id="latitude" placeholder="Latitude" />
     <button type="submit" id="input-button">Add Hurricane</button>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button type="button" id="print_button" onClick="print()">Print Submit Form</button>
+    <!-- <input type="button" 
+  onClick="window.print()" 
+  value="Print This Page"/> -->
   </div>
 </div>
 <table class="da-table minimalistBlack">
@@ -121,9 +126,9 @@ function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta)
     <td>${distance2}km</td>
     <td>${eta}</td>
   </tr>
+  button
   `;
   table.appendChild(tr)
-
 }
 window.addRow = addRow;
 function drawHurricane(x, y){
