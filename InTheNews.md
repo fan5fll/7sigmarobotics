@@ -31,7 +31,7 @@ layout: home
 
 
 <div class="event"><h3>FTC Robotics Team 7 Sigma wins Ohio State Championship</h3>
-<a href="Manufactory_OS_2.15.pdf" target="_blank">http://local.cincinnati.com/share/story/2273?86</a> </div>
+<a href="Manufactory_OS_2.15.PDF" target="_blank">http://local.cincinnati.com/share/story/2273?86</a> </div>
 
 <br>
 
