@@ -1,7 +1,9 @@
 ---
 layout: home
 ---
-
+<script type: Javascript>
+	alert("In order to see the video we have prepared for you, please use control/command and '-' to zoom out to 25%. The page will open when you close this dialog box")
+</script>
 <div class="logo-box">
 	<h1>Wilson Camp Video</h1>
 	<br>
