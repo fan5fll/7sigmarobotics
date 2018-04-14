@@ -1,1 +1,2 @@
-ErrorDocument 404 http://www.7sigmarobotics.org/
+ErrorDocument 404 /filenotfound.md
+IndexIgnore *
