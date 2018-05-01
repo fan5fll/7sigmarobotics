@@ -1,65 +1,26 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>ERROR - 404: File not found.</title>
+<link rel="icon" type="image/png" href="images/favicon_ico.ico">
+<title>7 Sigma Robotics</title>
+<link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+  <canvas id="myCanvas" width="480" height="320"></canvas>
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "9temh0ta"
+    }], "*")
+  }
+</script>
 
-<div class="container">
-  <div class="heading">
-    <h1 class="title">2048</h1>
-    <div class="score-container">0</div>
-  </div>
-  <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
 
-  <div class="game-container">
-    <div class="game-message">
-      <p></p>
-      <div class="lower">
-        <a class="retry-button">Try again</a>
-      </div>
-    </div>
 
-    <div class="grid-container">
-      <div class="grid-row">
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-      </div>
-      <div class="grid-row">
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-      </div>
-      <div class="grid-row">
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-      </div>
-      <div class="grid-row">
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-        <div class="grid-cell"></div>
-      </div>
-    </div>
 
-    <div class="tile-container">
-
-    </div>
-  </div>
-
-  <p class="game-explanation">
-    <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
-  </p>
-  <hr>
-  <p>
-  Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
-  </p>
-</div>
 
 </body>
 </html>
