@@ -12,7 +12,7 @@ layout: home
 		<p class="fade-in"><a href="/who">Learn More</a></p>
 	</div>
 <div class="text-right">
-	<img class="arrow-image" src="images/team_v3.jpg">
+	<img class="arrow-image" src="images/team_v4.jpg">
 </div>
 </div>
 <div class="container-row image-first">
@@ -79,6 +79,9 @@ layout: home
 </div>
 
 
+<div class="logo-box">
+	<h1>7 Sigma Robotics</h1>
+</div>
 
 
 <div class="twitter-box">
