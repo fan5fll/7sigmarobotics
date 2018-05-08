@@ -7,10 +7,27 @@
     <button type="submit" id="input-button">Add Hurricane</button>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <button type="button" id="print_button" onClick="print()">Print Submit Form</button>
+    <button type="button" id="open-Admin Options">Open Admin Options</button>
     <!-- <input type="button" 
   onClick="window.print()" 
   value="Print This Page"/> -->
   </div>
+</div>
+<div class="control-panel" style="">
+   <div class="control-panel-body">
+      <h1 style="text-align: center;">Admin Control Panel  </h1>
+      <hr>
+      <h2 style="font-weight: normal">Do you want the system to calculate:</h2>
+      <hr>
+      <div class="control-panel-options">
+        <span>Distance traveled<input data-variable="distapprove" type="checkbox" checked="true" /></span>
+        <span>Speed<input data-variable="speedapprove" type="checkbox" checked="true"/></span>
+        <span>Direction<input data-variable="directapprove" type="checkbox" checked="true"/></span>
+        <span>Distance to island<input data-variable="distislandapprove" type="checkbox" checked="true"/></span>
+        <span>ETA<input data-variable="etaapprove" type="checkbox" checked="true"/></span>
+      </div>
+      <button type="button" id="close-Admin Options">Close Admin Options</button>
+   </div>
 </div>
 <table class="da-table minimalistBlack">
   <thead>
@@ -34,6 +51,47 @@
 #canvas {
   flex: 0;
   /*cursor: none;*/
+}
+.control-panel{
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+.control-panel-body{
+  width: 35%;
+  min-height: 50%;
+  margin-top: 13rem;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  background-color: white;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.control-panel-options input {
+  float: right;
+  transform: scale(1.5);
+}
+
+.control-panel-options span:first-child {
+  margin-top: 1rem;
+} 
+.control-panel-options span {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.control-panel-body hr {
+  border-width: 1px;
+  border-style: solid;
 }
 .map-container > * {
   flex: 1;
@@ -133,13 +191,12 @@ function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta)
     <td>${lat}</td>
     <td>${long}</td>
     <td>Insert Category</td>
-    <td>${distance}km</td>
-    <td>${speed}km/h</td>
-    <td>${direction}</td>
-    <td>${distance2}km</td>
-    <td>${eta}</td>
+    <td>${distapprove==='y' ? distance : ''}km</td>
+    <td>${speed==='y' ? distance : ''}km/h</td>
+    <td>${direction==='y' ? distance : ''}</td>
+    <td>${distance2==='y' ? distance : ''}km</td>
+    <td>${eta==='y' ? distance : ''}</td>
   </tr>
-  
   `;
   // <tr>
   //   <td>${adv}</td>
@@ -253,6 +310,26 @@ function getLastHurricane(){
 let oldX = 0;
 let oldY = 0;
 
+const boxes = document.querySelectorAll('.control-panel-options input')
+boxes.forEach((box) => {
+  box.addEventListener('change', (e) => {
+    console.log(e);
+    if (e.target.dataset.variable === 'distapprove') {
+      distapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'speedapprove') {
+      speedapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'directapprove') {
+      directapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'distislandapprove') {
+      distislandapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'etaapprove') {
+      etaapprove = e.target.checked;
+    } else {
+      console.log('we couldn\'t match the checkbox');
+    }
+  })
+})
+
 canvas.addEventListener('mousemove', (e) => {
   // ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
   //drawHurricane(e.x, e.y);
@@ -296,5 +373,12 @@ inputButton.addEventListener("click", () => {
   advance += 1;
   objects.push({ x: x, y: y, type: 'hurricane'});
   drawObjects();
+})
+
+document.getElementById('open-Admin Options').addEventListener('click', () => {
+  document.querySelector('.control-panel').style.display = 'block';
+})
+document.getElementById('close-Admin Options').addEventListener('click', () => {
+  document.querySelector('.control-panel').style.display = 'none  ';
 })
 </script>
