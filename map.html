@@ -94,6 +94,19 @@ table.minimalistBlack tfoot td {
 </style>
 
 <script>
+//   var admin = prompt("Do you have the admin passowrd? If so, enter it. If no, type no")
+// if (admin==="science") {
+// alert("Admin access GRANTED")
+// alert("we will begin to ask you if you want features activated. answer 'y' for yes and 'n' for no (lowercase)")
+// var distapprove = prompt("Tell students the distance travelled? [y/n]")
+// var speedapprove = prompt("Tell students the speed? [y/n]")
+// var directapprove = prompt("Tell students the direction? [y/n]")
+// var distislandapprove = prompt("Tell students the distance to the island? [y/n]")
+// var etaapprove = prompt("Tell students the ETA? [y/n]")
+// }
+// if (admin==="no") {
+// alert("Ok thats fine, you will just continue as a student")}
+
 const CONV_RATE = 224;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
@@ -128,6 +141,17 @@ function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta)
   </tr>
   
   `;
+  // <tr>
+  //   <td>${adv}</td>
+  //   <td>${lat}</td>
+  //   <td>${long}</td>
+  //   <td>Insert Category</td>
+  //   <td>${distance}km</td>
+  //   <td>${speed}km/h</td>
+  //   <td>${direction}</td>
+  //   <td>${distance2}km</td>
+  //   <td>${eta}</td>
+  // </tr>
   table.appendChild(tr)
 }
 window.addRow = addRow;
