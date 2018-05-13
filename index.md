@@ -12,7 +12,7 @@ layout: home
 		<p class="fade-in"><a href="/who">Learn More</a></p>
 	</div>
 <div class="text-right">
-	<img class="arrow-image" src="images/team_v4.jpg">
+	<img class="arrow-image" src="images/team_v4.png">
 </div>
 </div>
 <div class="container-row image-first">
@@ -28,7 +28,7 @@ layout: home
 <div class="container-row text-first">
 	<div class="arrow-left">
 		<h2>WHY?</h2>   
-		<p class="fade">We compete in a competitive robotics and STEM organization called FIRST. FIRST is designed to give kids who are in the middle/upper school range of ages an opportunity of learning about STEM.</p>
+		<p class="fade">We compete in a competitive robotics and STEM organization called FIRST. FIRST is designed to give kids who are in the middle/upper s3.chool range of ages an opportunity of learning about STEM.</p>
 		<p class="fade-in"><a href="/why">Learn More</a></p>
 	</div>
 	<div class="text-right">
