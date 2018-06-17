@@ -7,8 +7,7 @@
     <button type="submit" id="input-button">Add Hurricane</button>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <button type="button" id="print_button" onClick="print()">Print Submit Form</button>
-    <button type="button" id="open-Admin Options" disabled>Open Admin Options</button>
-    <input type="password" id="unlock-admin-options" placeholder="Unlock Admin Options">
+    <button type="button" id="open-Admin Options">Open Admin Options</button>
     <!-- <input type="button" 
   onClick="window.print()" 
   value="Print This Page"/> -->
@@ -21,16 +20,11 @@
       <h2 style="font-weight: normal">Do you want the system to calculate:</h2>
       <hr>
       <div class="control-panel-options">
-      <span>Select/deselect all<input data-variable="checkall" type="checkbox"></span>
-      </div>
-      <hr>
-      <div class="control-panel-options">
         <span>Distance traveled<input data-variable="distapprove" type="checkbox"></span>
         <span>Speed<input data-variable="speedapprove" type="checkbox"></span>
         <span>Direction<input data-variable="directapprove" type="checkbox"></span>
         <span>Distance to island<input data-variable="distislandapprove" type="checkbox"></span>
         <span>ETA<input data-variable="etaapprove" type="checkbox"></span>
-        <span>Admin Password<input data-variable="admin-password" value="science"></span>
       </div>
       <button type="button" id="close-Admin Options">Close Admin Options</button>
    </div>
@@ -68,7 +62,7 @@
 }
 .control-panel-body{
   width: 35%;
-  min-height: 52%;
+  min-height: 50%;
   margin-top: 13rem;
   margin-right: auto;
   margin-left: auto;
@@ -83,9 +77,6 @@
 
 .control-panel-options input {
   float: right;
-}
-
-.control-panel-options input[type="checkbox"] {
   transform: scale(1.5);
 }
 
@@ -165,12 +156,11 @@ table.minimalistBlack tfoot td {
 // if (admin==="science") {
 // alert("Admin access GRANTED")
 // alert("we will begin to ask you if you want features activated. answer 'y' for yes and 'n' for no (lowercase)")
-let distapprove = false;
-let speedapprove = false;
-let directapprove = false;
-let distislandapprove = false;
-let etaapprove = false;
-let password = 'science';
+// var distapprove = prompt("Tell students the distance travelled? [y/n]")
+// var speedapprove = prompt("Tell students the speed? [y/n]")
+// var directapprove = prompt("Tell students the direction? [y/n]")
+// var distislandapprove = prompt("Tell students the distance to the island? [y/n]")
+// var etaapprove = prompt("Tell students the ETA? [y/n]")
 // }
 // if (admin==="no") {
 // alert("Ok thats fine, you will just continue as a student")}
@@ -201,11 +191,11 @@ function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta)
     <td>${lat}</td>
     <td>${long}</td>
     <td>Insert Category</td>
-    <td>${distapprove  ? distance : ''}km</td>
-    <td>${speedapprove ? speed : ''}km/h</td>
-    <td>${directapprove ? direction : ''}</td>
-    <td>${distislandapprove ? distance2 : ''}km</td>
-    <td>${etaapprove ? eta : ''}</td>
+    <td>${distapprove==='y' ? distance : ''}km</td>
+    <td>${speed==='y' ? distance : ''}km/h</td>
+    <td>${direction==='y' ? distance : ''}</td>
+    <td>${distance2==='y' ? distance : ''}km</td>
+    <td>${eta==='y' ? distance : ''}</td>
   </tr>
   `;
   // <tr>
@@ -334,18 +324,6 @@ boxes.forEach((box) => {
       distislandapprove = e.target.checked;
     } else if (e.target.dataset.variable === 'etaapprove') {
       etaapprove = e.target.checked;
-    } else if (e.target.dataset.variable === 'admin-password') {
-      password = e.target.value;      
-    } else if (e.target.dataset.variable === 'checkall') {
-      const changedTo = e.target.checked;
-      distapprove = changedTo;
-      speedapprove = changedTo;
-      directapprove = changedTo;
-      distislandapprove = changedTo;
-      etaapprove = changedTo;
-      boxes.forEach((box) => {
-        box.checked = changedTo;
-      })
     } else {
       console.log('we couldn\'t match the checkbox');
     }
@@ -397,14 +375,10 @@ inputButton.addEventListener("click", () => {
   drawObjects();
 })
 
-document.getElementById('unlock-admin-options').addEventListener('change', (e) => {
-  document.getElementById('open-Admin Options').disabled = e.target.value !== password;
-});
 document.getElementById('open-Admin Options').addEventListener('click', () => {
   document.querySelector('.control-panel').style.display = 'block';
 })
 document.getElementById('close-Admin Options').addEventListener('click', () => {
-  document.querySelector('.control-panel').style.display = 'none';
-  document.getElementById('open-Admin Options').disabled = true;
+  document.querySelector('.control-panel').style.display = 'none  ';
 })
 </script>
