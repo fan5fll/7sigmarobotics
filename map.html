@@ -8,7 +8,15 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <button type="button" id="print_button" onClick="print()">Print Submit Form</button>
     <button type="button" id="open-Admin Options" disabled>Open Admin Options</button>
-    <input type="password" id="unlock-admin-options" placeholder="Unlock Admin Options">
+    <input type="password" id="unlock-admin-options" placeholder="Unlock Admin Options"><button type="button" id="view" onclick='
+    document.getElementById("unlock-admin-options").type="text"
+    document.getElementById("view").hidden = true
+    document.getElementById("hide").hidden = false
+    '>View Password</button><button type="button" id="hide" onclick='
+    document.getElementById("unlock-admin-options").type="password"
+    document.getElementById("view").hidden = false 
+    document.getElementById("hide").hidden = true 
+    ' hidden>Hide Password</button>
     <!-- <input type="button" 
   onClick="window.print()" 
   value="Print This Page"/> -->
@@ -32,7 +40,7 @@
         <span>ETA<input data-variable="etaapprove" type="checkbox"></span>
         <span>Admin Password<input data-variable="admin-password" value="science"></span>
       </div>
-      <button type="button" id="close-Admin Options">Close Admin Options</button>
+      <button type="button" id="close-Admin Options" onclick="document.getElementById('unlock-admin-options').value=''">Close Admin Options</button>
    </div>
 </div>
 <table class="da-table minimalistBlack">
@@ -182,7 +190,7 @@ const backgroundImage = new Image();
 backgroundImage.addEventListener('load', () => {
   ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 }, false);
-backgroundImage.src = "/images/map.png";
+backgroundImage.src = "http://www.7sigmarobotics.org/images/map.png";
 const table=document.getElementById("data")
 function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta){
   const tr=document.createElement("tr");
@@ -382,4 +390,5 @@ document.getElementById('close-Admin Options').addEventListener('click', () => {
   document.querySelector('.control-panel').style.display = 'none';
   document.getElementById('open-Admin Options').disabled = true;
 })
+
 </script>
