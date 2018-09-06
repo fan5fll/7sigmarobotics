@@ -12,10 +12,16 @@
     document.getElementById("unlock-admin-options").type="text"
     document.getElementById("view").hidden = true
     document.getElementById("hide").hidden = false
+    document.getElementById("unlock-admin-options").style.backgroundColor = "red"
+    document.getElementById("unlock-admin-options").style.Color = "white"
+    document.getElementById("unlock-admin-options").placeholder = "The password is visible"
     '>View Password</button><button type="button" id="hide" onclick='
     document.getElementById("unlock-admin-options").type="password"
     document.getElementById("view").hidden = false 
     document.getElementById("hide").hidden = true 
+    document.getElementById("unlock-admin-options").style.backgroundColor = "white"
+    document.getElementById("unlock-admin-options").style.Color = "black"
+    document.getElementById("unlock-admin-options").placeholder = "Unlock Admin Options"
     ' hidden>Hide Password</button>
     <!-- <input type="button" 
   onClick="window.print()" 
@@ -29,18 +35,35 @@
       <h2 style="font-weight: normal">Do you want the system to calculate:</h2>
       <hr>
       <div class="control-panel-options">
-      <span>Select/deselect all<input data-variable="checkall" type="checkbox"></span>
+      <span onmouseover="document.getElementById('desc').innerHTML = 'Set all options to true or false'">Select/deselect all<input data-variable="checkall" type="checkbox"></span>
       </div>
       <hr>
       <div class="control-panel-options">
-        <span>Distance traveled<input data-variable="distapprove" type="checkbox"></span>
-        <span>Speed<input data-variable="speedapprove" type="checkbox"></span>
-        <span>Direction<input data-variable="directapprove" type="checkbox"></span>
-        <span>Distance to island<input data-variable="distislandapprove" type="checkbox"></span>
-        <span>ETA<input data-variable="etaapprove" type="checkbox"></span>
-        <span>Admin Password<input data-variable="admin-password" value="science"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the measurement of how far the hurricane has travelled.'">Distance traveled<input data-variable="distapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the measurement of how fast the hurricane has been travelling.'">Speed<input data-variable="speedapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the measurement of the direction the hurricane has been travelling. THIS FEATURE IS NOT PERFECT.'">Direction<input data-variable="directapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the measurement of how far the hurricane is from the island of montserrat.'">Distance to island<input data-variable="distislandapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the calculated time of landfall.'">ETA<input data-variable="etaapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Change the admin password'">Admin Password<input type="password" data-variable="admin-password" id="admin-pass" value="science"></span><button type="button" id="view_a" onclick='
+    document.getElementById("admin-pass").type="text"
+    document.getElementById("view_a").hidden = true
+    document.getElementById("hide_a").hidden = false
+    document.getElementById("admin-pass").style.backgroundColor = "red"
+    document.getElementById("admin-pass").style.Color = "white"
+    document.getElementById("admin-pass").placeholder = "The password is visible"
+    '>View Password</button><button type="button" id="hide_a" onclick='
+    document.getElementById("admin-pass").type="password"
+    document.getElementById("view_a").hidden = false 
+    document.getElementById("hide_a").hidden = true 
+    document.getElementById("admin-pass").style.backgroundColor = "white"
+    document.getElementById("admin-pass").style.Color = "black"
+    document.getElementById("admin-pass").placeholder = "Unlock Admin Options"
+    ' hidden>Hide Password</button>
       </div>
       <button type="button" id="close-Admin Options" onclick="document.getElementById('unlock-admin-options').value=''">Close Admin Options</button>
+      <div style="padding:3px;margin:3px;border-color:black;border-width:1px;border-style:solid;">
+        <p id="desc">Hover over an option</p>
+      </div>
    </div>
 </div>
 <table class="da-table minimalistBlack">
