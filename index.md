@@ -4,14 +4,15 @@ layout: home
 <div class="logo-box">
 	<h1>7 Sigma Robotics</h1>
 </div>
-<div class="container-row text-first">
+<div class="logo-box" style="background-image:none;cursor:auto;color:white"><h2>The website is currently under maintenance. We are sorry for any inconviences this has created. You can contact us <a href="mailto:7sigmarobotics@gmail.com">here</a> if need be.</h2></div>
+<!-- <div class="container-row text-first">
 	<div class="arrow-left">
 		<h2>WHO?</h2>
 		<p class="fade">We are FTC team 10030, 7 Sigma. We are a neighborhood team from Cincinnati, Ohio comprised of 7 members
 		<br> <br> please contact us at 7sigmarobotics@gmail.com</p>
 		<p class="fade-in"><a href="/who">Learn More</a></p>
-	</div>
-<div class="text-right">
+	</div> -->
+<!-- <div class="text-right">
 	<img class="arrow-image" src="images/team_v4.PNG">
 </div>
 </div>
@@ -93,7 +94,7 @@ layout: home
 </a>
 </div>
 
-
+ -->
 <!--https://platform.twitter.com/widgets.js
 //
 <!-- <div class="container-row">
@@ -105,4 +106,4 @@ layout: home
 	<div class="text-right">
 		<img class="arrow-image" src="images/thx.PNG">
 	</div>
-</div> -->i
+</div> -->
