@@ -4,7 +4,6 @@ layout: home
 <div class="logo-box">
 	<h1>7 Sigma Robotics</h1>
 </div>
-<div class="logo-box" style="background-image:none;cursor:auto;color:white"><h2>The website is currently under maintenance. We are sorry for any inconviences this has created. You can contact us <a href="mailto:7sigmarobotics@gmail.com">here</a> if need be.</h2></div>
 <div class="container-row text-first">
 	<div class="arrow-left">
 		<h2>WHO?</h2>
